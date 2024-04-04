@@ -1,0 +1,54 @@
+#include<iostream> 
+#include<string.h> 
+#include<stdlib.h> 
+using namespace std; 
+class Avtomobil{ 
+ private: 
+  string nomi;
+  string narxi;
+  string soni; 
+  int yili; 
+  float mator hajmi; 
+  string rangi ;
+  public: 
+   void show(){ 
+   static int k=0; 
+   cout<<++k<<" - Avtomobil': "<<endl<<endl; 
+   cout<<"nomi: "<<nomi<<endl; 
+   cout<<"narxi: "<<narxi<<endl<<endl;
+   cout<<"soni: "<<soni<<endl<<endl; 
+   cout<<"Yili: "<<yili<<endl<<endl;
+   cout<<"mator hajmi: "<<mator hajmi<<endl<<endl;
+   cout<<"rangi: "<<rangi<<endl<<endl;
+  }; 
+  void input(){ 
+   static int k=0;  
+   cout<<++k<<" - Avtomobil: "<<endl<<endl;
+   cout<<"nomi: "<<nomi; cin>>narxi; 
+   cout<<"narxi: "; cin>>narxi;
+   cout<<"soni: "; cin>> soni; 
+   cout<<"Yili: "; cin>>yili; 
+   cout<<"mator hajmi: "; cin>>mator;
+   cout<<"rangi: "; cin>> rangi;  
+   cout<<endl; 
+  }
+  void  qidir(string s){ 
+      if(ismi.compare(s)==0)
+   { 
+    cout<<"Bunday Avtomobil mavjud: "<<endl; 
+    show(); 
+      }  
+  }
+}; 
+int main(){ 
+   Avtomobil t[100]; 
+   int N; cout<<"Avtomobil sonini kiriting: "; cin>>N; 
+   for(int i=0; i<N; i++){ 
+        t[i].input(); 
+   } 
+   string s; 
+   cout<<endl<<"Qidirilayotgan Avtomobil nomini kiriting: "; cin>>s; 
+   for(int i=0; i<N; i++){ 
+       t[i].qidir(s); 
+   }    
+}
